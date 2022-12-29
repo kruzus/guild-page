@@ -1,21 +1,21 @@
-import { useState } from 'react'
-import Link from './Link'
-import headerNavLinks from '@/data/headerNavLinks'
+import { useState } from "react";
+import Link from "./Link";
+import headerNavLinks from "@/data/headerNavLinks";
 
 const MobileNav = () => {
-  const [navShow, setNavShow] = useState(false)
+  const [navShow, setNavShow] = useState(false);
 
   const onToggleNav = () => {
     setNavShow((status) => {
       if (status) {
-        document.body.style.overflow = 'auto'
+        document.body.style.overflow = "auto";
       } else {
         // Prevent scrolling
-        document.body.style.overflow = 'hidden'
+        document.body.style.overflow = "hidden";
       }
-      return !status
-    })
-  }
+      return !status;
+    });
+  };
 
   return (
     <div className="sm:hidden">
@@ -24,23 +24,10 @@ const MobileNav = () => {
         className="ml-1 mr-1 h-8 w-8 rounded py-1"
         aria-label="Toggle Menu"
         onClick={onToggleNav}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className="text-gray-900 dark:text-gray-100"
-        >
-          <path
-            fillRule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </button>
+      ></button>
       <div
         className={`fixed top-0 left-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out dark:bg-gray-800 ${
-          navShow ? 'translate-x-0' : 'translate-x-full'
+          navShow ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex justify-end">
@@ -79,7 +66,7 @@ const MobileNav = () => {
         </nav>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MobileNav
+export default MobileNav;

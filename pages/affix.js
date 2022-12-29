@@ -1,4 +1,4 @@
-import { PageSEO } from '@/components/SEO'
+import { PageSEO } from "@/components/SEO";
 
 // export async function getStaticProps() {
 //   // Call an external API endpoint to get posts.
@@ -15,7 +15,8 @@ import { PageSEO } from '@/components/SEO'
 //   }
 // }
 
-export default function Tags() {
+export default function Tags({ AFFIX }) {
+  console.log(AFFIX);
   return (
     <>
       <PageSEO title={`Affix`} description="Things I blog about" />
@@ -25,10 +26,9 @@ export default function Tags() {
             US
           </h1>
         </div>
-        <h1 className="text-5xl font-extrabold text-rose-500">
-          Tyrannical, Bursting, Grievous, Thundering
-        </h1>
+        <h1 className="text-5xl font-extrabold text-rose-500"></h1>
+        Details:
       </div>
     </>
-  )
+  );
 }
